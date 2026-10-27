@@ -15,13 +15,15 @@
       margin: 0;
       padding: 0;
     }
-  body {
-      font-family:sans-serif;
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f7f9fa;
       color: #2c3e50;
       line-height: 1.6;
     }
-/* Top Navigation bar */
+
+    /* Top Navigation bar */
     nav {
       background-color: #1e3c72;
       padding: 15px 40px;
@@ -31,6 +33,7 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       position: relative;
     }
+
     nav ul {
       display: flex;
       align-items: center;
@@ -38,6 +41,7 @@
       list-style: none;
       margin: 0 ;
     }
+
     nav ul li a {
       color: #ffffff;
       text-decoration: none;
@@ -131,9 +135,9 @@
       color: #66788a;
     }
 
-    /* Pure Resort Detail Cards */
+    /* Pure Resort Detail Cards - NO IMAGES */
     .resort-detail-card {
-      background: #c14646;
+      background: #ffffff;
       border-radius: 18px;
       padding: 35px 40px;
       margin-bottom: 30px;
@@ -396,34 +400,41 @@
       transition: background-color 0.2s ease, transform 0.2s ease;
       cursor: pointer;
     }
-     .footer-social a:hover,
-     .footer-social .social-no-click:hover {
+
+    .footer-social a:hover,
+    .footer-social .social-no-click:hover {
       background-color: #e5a34b;
       transform: translateY(-2px);
     }
+
     .footer-bottom {
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       padding-top: 20px;
       font-size: 13px;
       color: #718096;
     }
-      @media (max-width: 768px) {
+
+    @media (max-width: 768px) {
       .resort-detail-card {
         padding: 25px 20px;
       }
+
       .contact-banner {
         flex-direction: column;
         text-align: center;
       }
+
       .contact-info p {
         justify-content: center;
       }
+
       .contact-actions {
         justify-content: center;
       }
     }
   </style>
 </head>
+
 <body>
   <!-- Navigation -->
   <nav>
@@ -437,7 +448,8 @@
       <li><a href="reviews.html">REVIEWS</a></li>
     </ul>
   </nav>
--- Hero  --
+
+  <!-- Hero Header -->
   <header class="about-hero">
     <h1>About YN Peace of Stay</h1>
     <p>
@@ -620,10 +632,12 @@
           <i class="fa fa-phone"></i> Call 9363372360
         </button>
         <button type="button" class="btn-whatsapp">
-          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us</button>
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </button>
       </div>
     </section>
   </main>
+
   <!-- Footer -->
   <footer class="main-footer">
     <div class="footer-brand">YN Peace of Stay</div>
