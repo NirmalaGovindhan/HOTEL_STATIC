@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+    color: black;
+}
+
+nav, h1, ul, li {
+    display: inline-block;
+}
+
+ul {
+    margin-left: 700px;
+    background-color: transparent;
+    color: red;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.p {
+    background-color: white;
+    color: blue;
+}
+
+.body {
+    background-image: url("../images/myst-yellow-lakes-resorts-spa-yercaud.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+}
+
+nav ul li {
+   background-color: transparent;
+}
+
+.banner {
+    min-height: 600px;
+    background-image: url("../images/myst-yellow-lakes-resorts-spa-yercaud.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.banner-content {
+    position: absolute;
+    top: 30%;
+    left: 6%;
+}
+
+.banner-content h2 {
+    font-size: 60px;
+    line-height: 1.0;
+    margin-bottom: 30px;
+    color: aqua;
+}
+
+.banner-content p {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: white;
+    width: 80%;
+}
+
+nav {
+    height: auto;
+    padding: 20px;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 100;
+}
+
+nav ul {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.banner-content h2 {
+    font-size: 60px;
+    margin-left: 80px;
+}
+
+.logo {
+    width: 100px;
+    height: 60px;
+    object-fit: contain;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    z-index: 100;
+    background: transparent;
+}
+
+nav > a,
+.logo-link {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    text-decoration: none;
+}
+
+nav ul li a {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus,
+nav ul li a.active {
+    color: orange;
+    background-color: transparent;
+}
+
+nav li:first-child a {
+    font-size: 30px;
+}

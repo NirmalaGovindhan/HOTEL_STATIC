@@ -1,0 +1,173 @@
+.resort-card {
+    width: 100%;
+    display: flex;
+    border: 2px solid black;
+    height: 500px;
+    margin: 50px auto;
+    background-color: darkcyan;
+    border-radius: 30px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.resort-card > img {
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+}
+
+body.body nav ul li a {
+    color: white;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus,
+nav ul li a.active {
+    color: orange;
+    background-color: transparent;
+}
+
+.logo2 img {
+    width: 100px;
+    height: 60px;
+    margin-right: 0%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.resort-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.resort h2 {
+    align-items: center;
+}
+
+.resort details h2 {
+    font-size: 25px;
+    margin: 30px;
+}
+
+.resort details p {
+    font-size: 25px;
+    margin: 10px;
+}
+
+.resort details h3 {
+    margin: 30px;
+    font-size: 15px;
+    width: 50px;
+    color: brown;
+    align-items: center;
+}
+
+.resort-details button,
+.resort details button,
+.resort-card button {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 4px 8px gray;
+}
+
+.resort-details button:hover,
+.resort-card button:hover {
+    background-color: darkorange;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px gray;
+}
+
+.resort-details button:active,
+.resort-details button:focus,
+.resort-card button:active,
+.resort-card button:focus {
+    background-color: green;
+    color: white;
+    transform: scale(0.95);
+    border-radius: 15px;
+}
+
+.peace {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.peace p {
+    margin: 20px auto;
+    width: 100%;
+    color: black;
+    font-size: 30px;
+    text-align: center;
+}
+
+.explore-box {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.explore-box button,
+.explore-box botton,
+.botton {
+    background-color: orange;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 15px 35px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px gray;
+}
+
+.explore-box button:hover,
+.explore-box botton:hover,
+.botton:hover {
+    background-color: darkorange;
+    transform: translateY(-2px);
+}
+
+.ex-icon {
+    text-decoration: none;
+    display: inline-block;
+}
+
+body {
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}

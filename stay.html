@@ -5,61 +5,57 @@
   <meta charset="UTF-8">
   <title>Resort Gallery</title>
   <script src="https://kit.fontawesome.com/873fc09bf4.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" type="text/css" href="ht.css">
-  <link rel="stylesheet" type="text/css" href="resort.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/ht.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/stay.css">
 </head>
 
 <body>
-  <a href="https://www.youtube.com/results?search_query=yercaud+resorts" target="_blank" class="app-icon"><i
-      class="fa fa-youtube-play" aria-hidden="true"></i></a>
-  <a href="https://www.google.com/maps/search/yercaud++resorts/@11.7942922,78.179596,16219m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI2MDkzMC4wIKXMDSoASAFQAw%3D%3D "
-    class="g-map-icon"><i class="fa fa-google" aria-hidden="true"></i></a>
   <nav>
     <ul>
 
-      <li><a href="ht.html" class="home-btn3"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li><a href="index.html" class="home-btn3"><i class="fa fa-home" aria-hidden="true"></i></a></li>
       <li><a href="resort.html" class="demo1">RESORT</a></li>
-      <li><a href="about us.html" class="demo2">ABOUT US </a></li>
+      <li><a href="aboutus.html" class="demo2">ABOUTUS</a></li>
       <li><a href="reviews.html" class="demo3">REVIEWS</a></li>
 
     </ul>
   </nav>
-  <a href="ht.html" class="logo3">
-    <img src="y logo.png" class="logo" alt="Resort logo"></a><br><br>
+  <a href="index.html" class="logo3">
+    <img src="assets/images/y logo.png" class="logo" alt="Resort logo"></a><br><br>
 
   <h1>TIPPERARY ESTATE STAY</h1>
   <div class="full-gallery-layout">
     <div class="gallery">
       <div class="big-image">
-        <img src="tipperary estate stay.jpg" alt="main-image">
+        <img src="assets/images/tipperary estate stay.jpg" alt="main-image">
       </div>
 
       <div class="side-images">
         <div class="side-item">
-          <img src="tip bedroom.jpg" alt="side1">
+          <img src="assets/images/tip bedroom.jpg" alt="side1">
           <h2>Bed room</h2>
         </div>
         <div class="side-item">
-          <img src="tip camping fire.jpg" alt="side2">
+          <img src="assets/images/tip camping fire.jpg" alt="side2">
           <h2>Camping Fire</h2>
         </div>
         <div class="side-item">
-          <img src="room.4.jpg" alt="bottom1">
+          <img src="assets/images/room.4.jpg" alt="bottom1">
           <h2>Bathing place</h2>
         </div>
       </div>
     </div>
     <div class="bottom-image">
       <div class="card">
-        <img src="tip relax.jpg" alt="bottom2">
+        <img src="assets/images/tip relax.jpg" alt="bottom2">
         <h2>Relaxing place</h2>
       </div>
       <div class="card mint">
-        <img src="room.8.webp" alt="bottom3">
+        <img src="assets/images/room.8.webp" alt="bottom3">
         <h2>Swimming pool</h2>
       </div>
       <div class="card more">
-        <img src="tip veiw.jpeg" alt="bottom4">
+        <img src="assets/images/tip veiw.jpeg" alt="bottom4">
         <h2>Bolgany view</h2>
       </div>
     </div>
@@ -123,7 +119,7 @@
       <button>Explore</button>
     </div>
 
-    <img src="veiw4.jpg" alt="Resort">
+    <img src="assets/images/veiw4.jpg" alt="Resort">
   </section>
 
   <!-- Rooms -->
@@ -171,7 +167,7 @@
 
   <!-- Events -->
   <section class="feature">
-    <img src="DINNING2.jpg" alt="Celebration hall">
+    <img src="assets/images/DINNING2.jpg" alt="Celebration hall">
 
     <div>
       <h2>Celebrate Every Occasion</h2>
@@ -201,7 +197,7 @@
       <button>Explore</button>
     </div>
 
-    <img src="bliss spa.jpg" alt="Bliss Spa">
+    <img src="assets/images/bliss spa.jpg" alt="Bliss Spa">
   </section>
   <section class="amenities">
     <h1>Hotel Amenities</h1>
@@ -351,14 +347,22 @@
   </section>
 
   <!-- change -->
-  <footer class="change">
+  <div class="change">
     <h2>TIPPERARY  RESORT</h2>
     <p>Experience Nature. Enjoy Comfort.</p>
     <p>© 2026 TIPPERARY STAY RESORT</p>
-    <p><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-square-instagram"></i>
-  
-<i class="fa-brands fa-google"></i></p>
-    </footer>
+        <p>
+      <a href="https://www.youtube.com/results?search_query=yercaud+resorts" target="_blank" title="YouTube" style="color: inherit; text-decoration: none; margin: 0 10px; font-size: 26px;">
+        <i class="fa-brands fa-youtube"></i>
+      </a>
+      <span title="Instagram" style="margin: 0 10px; font-size: 26px;">
+        <i class="fa-brands fa-square-instagram"></i>
+      </span>
+      <a href="https://www.google.com/maps/search/yercaud+resorts" target="_blank" title="Google" style="color: inherit; text-decoration: none; margin: 0 10px; font-size: 26px;">
+        <i class="fa-brands fa-google"></i>
+      </a>
+    </p>
+  </div>
 
     <style>
       * {
@@ -398,7 +402,7 @@
       .availability-container .date-box,
       .date-box {
         flex: 1;
-        border: 2px solid rgb(8, 8, 8);
+        border: 2px solid black;
         padding: 15px 20px;
         border-radius: 8px;
         background-color: skyblue;
@@ -418,7 +422,7 @@
         width: 100%;
         padding: 10px;
         box-sizing: border-box;
-        border: 1px solid #333;
+        border: 1px solid black;
         border-radius: 4px;
         font-size: 16px;
       }
@@ -443,13 +447,13 @@
         border: 1px solid black;
         padding: 15px;
         text-align: left;
-        background-color: rgb(221, 201, 207);
+        background-color: pink;
       }
 
 
       .record {
-        background-color: #28784b;
-        color: rgb(255, 255, 255);
+        background-color: green;
+        color: white;
         padding: 15px 5%;
         display: flex;
         justify-content: space-between;
@@ -553,8 +557,6 @@
       }
 
       @media (max-width: 700px) {
-
-        header,
         .availability-container,
         .welcome,
         .feature,
@@ -576,8 +578,6 @@
         }
       }
     </style>
-
-
 </body>
 
 </html>

@@ -1,0 +1,365 @@
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: color 0.2s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus,
+nav ul li a.active {
+    color: orange;
+    background-color: transparent;
+}
+
+.logo3 img {
+    width: 100px;
+    height: 60px;
+    margin-right: 0%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+body {
+    background-color: aliceblue;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+nav {
+    display: block;
+    width: 100%;
+}
+
+nav ul {
+    margin-left: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    clear: both;
+    color: black;
+}
+
+/* Gallery Layout matching user drawing - UNIFIED SEAMLESS GRID */
+.full-gallery-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 180px) 240px;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    clear: both;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: contents;
+}
+
+.gallery .big-image {
+    grid-column: 1 / 3;
+    grid-row: 1 / 4;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px gray;
+}
+
+.gallery .big-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.gallery .side-images {
+    display: contents;
+}
+
+.gallery .side-item:nth-child(1) {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+
+.gallery .side-item:nth-child(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.gallery .side-item:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+
+.gallery .side-item {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 12px gray;
+}
+
+.gallery .side-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery .side-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery .side-item h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(transparent, black);
+    text-align: left;
+}
+
+/* Bottom 3 Images Row */
+.bottom-image {
+    display: contents;
+}
+
+.bottom-image .card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.bottom-image .card:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+.bottom-image .card:nth-child(3) {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+}
+
+.bottom-image .card {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 12px gray;
+}
+
+.bottom-image img,
+.bottom-image .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.bottom-image .card:hover img {
+    transform: scale(1.05);
+}
+
+.bottom-image .card h2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 14px;
+    font-size: 16px;
+    color: white;
+    background: linear-gradient(transparent, black);
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .gallery {
+        flex-direction: column;
+    }
+    .gallery .side-images {
+        width: 100%;
+    }
+    .gallery .big-image img {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+    .bottom-image {
+        flex-direction: column;
+    }
+    .availability-container {
+        flex-direction: column;
+    }
+    .availability-container .booking-box {
+        flex-direction: column;
+    }
+    .availability-container table {
+        width: 100%;
+    }
+}
+
+.botton {
+    background-color: azure;
+    color: red;
+    width: 150px;
+    border: 2px solid black;
+    align-items: center;
+    padding: 20px;
+}
+
+.app-icon {
+    font-size: 40px;
+    color: red;
+    text-decoration: none;
+    margin-left: 90%;
+    gap: 40px;
+    cursor: pointer;
+}
+
+.g-map-icon {
+    font-size: 40px;
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+    gap: 40px;
+}
+
+.ex-icon {
+    font-size: 25px;
+    color: black;
+    border-bottom: 10px;
+}
+
+/* Availability Section: 90% Width */
+.availability-container {
+    width: 90%;
+    margin: 25px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Check-in and Check-out Box: 90% Width */
+.availability-container .booking-box,
+.booking-box {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.availability-container .date-box,
+.date-box {
+    flex: 1;
+    border: 2px solid black;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: skyblue;
+    box-sizing: border-box;
+}
+
+.date-box label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.date-box input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+.availability-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, tr, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 15px;
+    background-color: pink;
+}
+
+.topbar {
+    display: flex;
+    height: 200px;
+    width: 100%;
+    align-items: center;
+    background-color: aquamarine;
+    padding: 25px;
+    gap: 10px;
+}
+
+.support {
+    display: wrap;
+}
+
+.resort-map {
+    width: 100%;
+}
+
+.change {
+    background-color: green;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.change a {
+    color: inherit;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 26px;
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.change a:hover {
+    transform: scale(1.15);
+    opacity: 0.85;
+}

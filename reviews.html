@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Customer Reviews - YN Peace of Stay</title>
-  <link rel="stylesheet" type="text/css" href="ht.css">
-  <link rel="stylesheet" href="resort.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/ht.css">
+  <link rel="stylesheet" href="assets/css/resort.css">
   <script src="https://kit.fontawesome.com/873fc09bf4.js" crossorigin="anonymous"></script>
 
   <style>
@@ -17,7 +17,7 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f7f9fa;
+      background-color: aliceblue;
       color: #2c3e50;
       line-height: 1.6;
     }
@@ -25,56 +25,66 @@
     /* Top Navigation bar */
     nav {
       background-color: #1e3c72;
-      padding: 15px 40px;
+      padding: 15px 30px;
       display: flex;
+      flex-direction: row;
       justify-content: flex-end;
       align-items: center;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 4px 12px gray;
       position: relative;
+      width: 100%;
+      box-sizing: border-box;
     }
 
     nav ul {
-      display: flex ;
+      display: flex;
+      flex-direction: row;
       align-items: center;
+      justify-content: flex-end;
       gap: 25px;
       list-style: none;
-      margin: 0;
+      margin: 0 0 0 auto;
+      padding: 0;
     }
 
     nav ul li a {
-      color: #ffffff;
+      color: white;
+      background-color: transparent;
       text-decoration: none;
       font-size: 16px;
       font-weight: 600;
       padding: 8px 16px;
       border-radius: 6px;
-      transition: background-color 0.2s ease, color 0.2s ease;
+      transition: color 0.2s ease;
     }
 
     nav ul li a:hover,
+    nav ul li a:active,
+    nav ul li a:focus,
     nav ul li a.active {
-      background-color: #e5a34b;
-      color: #ffffff;
+      color: #e5a34b;
+      background-color: transparent;
     }
 
     .nav-logo {
       position: absolute;
       left: 30px;
       top: 10px;
-      height: 50px;
+      width: 100px;
+      height: 60px;
       object-fit: contain;
     }
 
     /* Header Banner */
-    .reviews-hero {
-      background: linear-gradient(135deg, rgba(30, 60, 114, 0.92), rgba(42, 82, 152, 0.92)),
-                  url("myst-yellow-lakes-resorts-spa-yercaud.jpg") center/cover no-repeat;
+    .reviews-banner {
+      background: linear-gradient(135deg, navy, black),
+                  url("assets/images/myst-yellow-lakes-resorts-spa-yercaud.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 60px 20px 50px 20px;
     }
 
-    .reviews-hero h1 {
+    .reviews-banner h1 {
       font-size: 38px;
       font-weight: 700;
       margin-bottom: 12px;
@@ -82,36 +92,13 @@
       text-align: center;
     }
 
-    .reviews-hero p {
+    .reviews-banner p {
       font-size: 18px;
       color: #e3ebf6;
       max-width: 600px;
       margin: 0 auto;
       align-items: center;
     }
-
-    .rating-summary {
-      display: inline-flex;
-      align-items: center;
-      gap: 15px;
-      background: rgba(255, 255, 255, 0.15);
-      padding: 10px 25px;
-      border-radius: 30px;
-      margin-top: 20px;
-      border: 1px solid rgba(255, 255, 255, 0.25);
-    }
-
-    .rating-score {
-      font-size: 32px;
-      font-weight: 700;
-      color: #f1c40f;
-    }
-
-    .rating-stars {
-      color: #f1c40f;
-      font-size: 20px;
-    }
-
     /* Reviews Container */
     .reviews-container {
       max-width: 1100px;
@@ -119,219 +106,140 @@
       padding: 0 20px;
     }
 
-    .reviews-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 25px;
-      margin-bottom: 50px;
+    .section-title {
+      text-align: center;
+      font-size: 26px;
+      color: black;
+      margin-bottom: 40px;
     }
 
-    /* Review Card */
-    .review-card {
-      background: #ffffff;
-      border-radius: 16px;
-      padding: 25px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-      border: 1px solid #eef2f5;
+    .reviews-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      margin-bottom: 70px;
+    }
+
+    /* Beginner Review Box */
+    .review-box {
+      background-color: white;
+      border: 1px solid gray;
+      border-radius: 10px;
+      padding: 28px 24px;
+      width: 330px;
+      box-sizing: border-box;
+      text-align: left;
+      box-shadow: 0 2px 8px gray;
       display: flex;
       flex-direction: column;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      justify-content: space-between;
     }
 
-    .review-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
-    }
-
-    .review-header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 15px;
-    }
-
-    .avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #1e3c72, #e5a34b);
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .reviewer-info h3 {
-      font-size: 18px;
-      color: #1a2a44;
-      margin-bottom: 3px;
-    }
-
-    .reviewer-info span {
-      font-size: 13px;
-      color: #8898aa;
-    }
-
-    .review-rating {
-      color: #f39c12;
+    .review-box .review-text {
       font-size: 15px;
-      margin-bottom: 12px;
-    }
-
-    .review-text {
-      font-size: 15px;
-      color: #4a5568;
-      line-height: 1.6;
+      color: black;
       font-style: italic;
-      margin-bottom: 15px;
+      margin-bottom: 18px;
+      line-height: 1.6;
     }
 
-    .stayed-tag {
-      margin-top: auto;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .review-box h3 {
+      font-size: 17px;
+      color: black;
+      margin-top: 8px;
+      margin-bottom: 4px;
+    }
+
+    .review-box .reviewer-place {
       font-size: 13px;
-      color: #27ae60;
-      background: #eafaf1;
-      padding: 4px 10px;
-      border-radius: 12px;
-      width: fit-content;
-      font-weight: 600;
+      color: gray;
+      margin-bottom: 10px;
     }
 
-    /* Simple Add Review Box */
-    .add-review-box {
-      background: #ffffff;
-      border-radius: 18px;
+    .review-box .stars {
+      color: orange;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .review-box .resort-stayed {
+      font-size: 13px;
+      color: green;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+
+    /* Beginner Feedback Form */
+    .feedback-box {
+      background-color: white;
+      border: 2px solid gray;
+      border-radius: 10px;
       padding: 35px 30px;
-      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.07);
-      border: 1px solid #e2e8f0;
-      max-width: 700px;
-      margin: 0 auto 50px auto;
-    }
-
-    .add-review-box h2 {
-      font-size: 24px;
-      color: #1a2a44;
-      margin-bottom: 8px;
+      max-width: 550px;
+      margin: 20px auto 60px auto;
+      box-shadow: 0 4px 10px gray;
       text-align: center;
     }
 
-    .add-review-box p {
+    .feedback-box h2 {
+      font-size: 22px;
+      color: black;
+      margin-bottom: 6px;
+    }
+
+    .feedback-box p {
       font-size: 14px;
-      color: #718096;
-      text-align: center;
-      margin-bottom: 25px;
+      color: gray;
+      margin-bottom: 20px;
     }
 
     .form-group {
-      margin-bottom: 18px;
+      margin-bottom: 15px;
+      text-align: left;
     }
 
     .form-group label {
       display: block;
       font-size: 14px;
-      font-weight: 600;
-      color: #2d3748;
-      margin-bottom: 6px;
+      font-weight: bold;
+      color: black;
+      margin-bottom: 5px;
     }
 
     .form-group input,
     .form-group select,
     .form-group textarea {
       width: 100%;
-      padding: 12px 14px;
-      border: 1px solid #cbd5e0;
-      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid gray;
+      border-radius: 6px;
       font-size: 15px;
-      outline: none;
+      box-sizing: border-box;
       font-family: inherit;
     }
 
     .form-group input:focus,
     .form-group select:focus,
     .form-group textarea:focus {
-      border-color: #1e3c72;
+      border-color: orange;
+      outline: none;
     }
 
     .submit-btn {
-      background-color: #e5a34b;
+      background-color: orange;
       color: white;
       border: none;
-      padding: 13px 30px;
-      border-radius: 8px;
+      padding: 12px 25px;
+      border-radius: 6px;
       font-size: 16px;
-      font-weight: 600;
+      font-weight: bold;
       cursor: pointer;
       width: 100%;
-      transition: background-color 0.2s ease;
     }
 
     .submit-btn:hover {
-      background-color: #d08b33;
-    }
-
-    /* Footer */
-    footer.main-footer {
-      background-color: #111a28;
-      color: #b0bac9;
-      padding: 40px 20px 25px 20px;
-      text-align: center;
-    }
-
-    .footer-brand {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 6px;
-    }
-
-    .footer-address {
-      font-size: 15px;
-      color: #9aa8bd;
-      margin-bottom: 12px;
-    }
-
-    .footer-phone {
-      font-size: 17px;
-      color: #e5a34b;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-
-    .footer-phone a {
-      color: #e5a34b;
-      text-decoration: none;
-    }
-
-    .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .footer-social a,
-    .footer-social .social-no-click {
-      color: #cbd5e0;
-      font-size: 20px;
-      transition: color 0.3s;
-      cursor: pointer;
-    }
-
-    .footer-social a:hover,
-    .footer-social .social-no-click:hover {
-      color: #e5a34b;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      padding-top: 20px;
-      font-size: 13px;
-      color: #718096;
+      background-color: darkorange;
     }
   </style>
 </head>
@@ -339,164 +247,98 @@
 <body>
   <!-- Navigation -->
   <nav>
-    <a href="ht.html">
-      <img src="y logo.png" class="nav-logo" alt="YN Peace of Stay Logo">
+    <a href="index.html">
+      <img src="assets/images/y logo.png" class="nav-logo" alt="YN Peace of Stay Logo">
     </a>
     <ul>
-      <li><a href="ht.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-      <li><a href="resort.html">RESORT</a></li>
-      <li><a href="about us.html">ABOUT US</a></li>
-      <li><a href="reviews.html" class="active">REVIEWS</a></li>
+      <li><a href="index.html" class="home-btn"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+      <li><a href="resort.html" class="demo1">RESORT</a></li>
+      <li><a href="aboutus.html" class="demo2">ABOUT US</a></li>
+      <li><a href="reviews.html" class="demo3 active">REVIEWS</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Banner -->
-  <header class="reviews-hero">
+  <!-- Reviews Banner -->
+  <div class="reviews-banner">
     <h1>Guest Reviews & Ratings</h1>
     <p>Read honest reviews from travelers who experienced peaceful stays in Yercaud.</p>
-
-    <div class="rating-summary">
-      <div class="rating-score">4.8</div>
-      <div>
-        <div class="rating-stars">★★★★★</div>
-        <small style="color: #cbd5e0;">Based on 1,250+ Verified Reviews</small>
-      </div>
-    </div>
-  </header>
+  </div>
 
   <main class="reviews-container">
+    <h2 class="section-title">Customer Reviews & Ratings</h2>
+
     <!-- Reviews Cards Grid -->
     <div class="reviews-grid">
       <!-- Review 1 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">K</div>
-          <div class="reviewer-info">
-            <h3>Kavitha Ramesh</h3>
-            <span>Salem • 2 days ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "The coffee estate atmosphere and morning mist were pure magic at Tipperary Estate Stay! 
-          The vintage colonial vibe made our weekend completely peaceful and relaxing."
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Stayed at Tipperary Estate Stay
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"The coffee estate atmosphere and morning mist were pure magic at Tipperary Estate Stay! The vintage colonial vibe made our weekend completely peaceful and relaxing."</p>
+        <h3>Kavitha Ramesh</h3>
+        <p class="reviewer-place">Salem</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: Tipperary Estate Stay</p>
+      </div>
 
       <!-- Review 2 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">S</div>
-          <div class="reviewer-info">
-            <h3>Suresh Kumar</h3>
-            <span>Chennai • 1 week ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "100% pure vegetarian organic food was exceptional at Wow Bison Woods! 
-          The wooden cottage, campfire with music, and peaceful green surroundings were worth every rupee."
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Stayed at Wow Bison Woods Organic Veg Resort
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"100% pure vegetarian organic food was exceptional at Wow Bison Woods! The wooden cottage, campfire with music, and peaceful green surroundings were worth every rupee."</p>
+        <h3>Suresh Kumar</h3>
+        <p class="reviewer-place">Chennai</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: Wow Bison Woods</p>
+      </div>
 
       <!-- Review 3 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">P</div>
-          <div class="reviewer-info">
-            <h3>Priya & Anand</h3>
-            <span>Coimbatore • 2 weeks ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "Sunrays Inn Resort gave us the most scenic sunrise view from our bedroom balcony. 
-          The swimming pool and garden paths were neat and clean. Kids enjoyed it thoroughly!"
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Stayed at Sunrays Inn Resort
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"Sunrays Inn Resort gave us the most scenic sunrise view from our bedroom balcony. The swimming pool and garden paths were neat and clean. Kids enjoyed it thoroughly!"</p>
+        <h3>Priya & Anand</h3>
+        <p class="reviewer-place">Coimbatore</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: Sunrays Inn Resort</p>
+      </div>
 
       <!-- Review 4 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">R</div>
-          <div class="reviewer-info">
-            <h3>Rajesh Sharma</h3>
-            <span>Bengaluru • 3 weeks ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "The infinity swimming pool overlooking the Shevaroy hills at Sterling Resort was breathtaking! 
-          World-class hospitality, delicious buffet, and super relaxing spa."
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Stayed at Sterling Resort
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"The infinity swimming pool overlooking the Shevaroy hills at Sterling Resort was breathtaking! World-class hospitality, delicious buffet, and super relaxing spa."</p>
+        <h3>Rajesh Sharma</h3>
+        <p class="reviewer-place">Bengaluru</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: Sterling Resort</p>
+      </div>
 
       <!-- Review 5 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">D</div>
-          <div class="reviewer-info">
-            <h3>Deepak Natarajan</h3>
-            <span>Trichy • 1 month ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "Grand Palace Resort truly feels royal! The lake and valley panoramic views from the room 
-          are the best in Yercaud. Warm and courteous staff."
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Stayed at Grand Palace Resort
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"Grand Palace Resort truly feels royal! The lake and valley panoramic views from the room are the best in Yercaud. Warm and courteous staff."</p>
+        <h3>Deepak Natarajan</h3>
+        <p class="reviewer-place">Trichy</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: Grand Palace Resort</p>
+      </div>
 
       <!-- Review 6 -->
-      <article class="review-card">
-        <div class="review-header">
-          <div class="avatar">M</div>
-          <div class="reviewer-info">
-            <h3>Meenakshi S.</h3>
-            <span>Madurai • 1 month ago</span>
-          </div>
-        </div>
-        <div class="review-rating">★★★★★</div>
-        <p class="review-text">
-          "Booked through YN Peace of Stay and got the best direct tariff with zero hassle. 
-          Called their helpline 9363372360 and got instant confirmation. Excellent service!"
-        </p>
-        <div class="stayed-tag">
-          <i class="fa fa-check-circle"></i> Verified YN Peace of Stay Customer
-        </div>
-      </article>
+      <div class="review-box">
+        <p class="review-text">"Booked through YN Peace of Stay and got the best direct tariff with zero hassle. Called their helpline 9363372360 and got instant confirmation. Excellent service!"</p>
+        <h3>Meenakshi S.</h3>
+        <p class="reviewer-place">Madurai</p>
+        <p class="stars">⭐⭐⭐⭐⭐</p>
+        <p class="resort-stayed">Stayed at: YN Peace of Stay</p>
+      </div>
     </div>
 
-    <!-- Simple Add Review Box -->
-    <section class="add-review-box">
-      <h2>Leave a Review</h2>
+    <!-- Beginner Level Feedback Form -->
+    <div class="feedback-box">
+      <h2>Give Your Rating & Feedback</h2>
       <p>Share your experience with other travelers</p>
       
       <form id="reviewForm" action="#">
         <div class="form-group">
-          <label>Your Name</label>
+          <label>Your Name:</label>
           <input type="text" placeholder="Enter your full name">
         </div>
         
         <div class="form-group">
-          <label>Select Resort</label>
+          <label>Select Resort:</label>
           <select>
-            <option value="">Choose a Resort</option>
+            <option value="">-- Choose a Resort --</option>
             <option value="tipperary">Tipperary Estate Stay</option>
             <option value="wow-bison">Wow Bison Woods Organic Veg Resort</option>
             <option value="sunrays">Sunrays Inn Resort</option>
@@ -506,48 +348,24 @@
         </div>
 
         <div class="form-group">
-          <label>Rating</label>
+          <label>Your Rating:</label>
           <select>
-            <option value="5">⭐⭐⭐⭐⭐ (5 / 5 - Excellent)</option>
-            <option value="4">⭐⭐⭐⭐ (4 / 5 - Very Good)</option>
-            <option value="3">⭐⭐⭐ (3 / 5 - Good)</option>
+            <option value="5">⭐⭐⭐⭐⭐ (5 Star - Excellent)</option>
+            <option value="4">⭐⭐⭐⭐ (4 Star - Very Good)</option>
+            <option value="3">⭐⭐⭐ (3 Star - Good)</option>
+            <option value="2">⭐⭐ (2 Star - Average)</option>
+            <option value="1">⭐ (1 Star - Poor)</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Your Review</label>
-          <textarea rows="4" placeholder="Write a few lines about your stay and experience..."></textarea>
+          <label>Your Feedback:</label>
+          <textarea rows="4" placeholder="Write your feedback and stay experience here..."></textarea>
         </div>
 
-        <button type="button" class="submit-btn">Submit Review</button>
+        <button type="button" class="submit-btn">Submit Feedback</button>
       </form>
-    </section>
+    </div>
   </main>
-
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="footer-brand">YN Peace of Stay</div>
-    <div class="footer-address">
-      <i class="fa fa-map-marker-alt"></i> Yercaud, Salem, Tamil Nadu, India
-    </div>
-    <div class="footer-phone">
-      <i class="fa fa-phone-alt"></i> Helpline: <a href="tel:9363372360">9363372360</a>
-    </div>
-    <div class="footer-social">
-      <a href="https://www.youtube.com/results?search_query=yercaud+resorts" target="_blank" title="YouTube">
-        <i class="fa-brands fa-youtube"></i>
-      </a>
-      <span class="social-no-click" title="Instagram">
-        <i class="fa-brands fa-instagram"></i>
-      </span>
-      <a href="https://www.google.com/maps/search/yercaud++resorts" target="_blank" title="Google Maps">
-        <i class="fa-brands fa-google"></i>
-      </a>
-    </div>
-    <div class="footer-bottom">
-      <p>© 2026 YN Peace of Stay. All Rights Reserved.</p>
-    </div>
-  </footer>
 </body>
-
 </html>
