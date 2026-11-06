@@ -16,12 +16,11 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family:sans-serif;
       background-color: aliceblue;
       color: #2c3e50;
       line-height: 1.6;
     }
-
     /* Top Navigation bar */
     nav {
       background-color: #1e3c72;
@@ -59,8 +58,6 @@
     }
 
     nav ul li a:hover,
-    nav ul li a:active,
-    nav ul li a:focus,
     nav ul li a.active {
       color: #e5a34b;
       background-color: transparent;
@@ -77,8 +74,8 @@
 
     /* Header Banner */
     .reviews-banner {
-      background: linear-gradient(135deg, navy, black),
-                  url("assets/images/myst-yellow-lakes-resorts-spa-yercaud.jpg") center/cover no-repeat;
+      background: linear-gradient( navy, black),
+      url("assets/images/myst-yellow-lakes-resorts-spa-yercaud.jpg") center/cover no-repeat;
       color: white;
       text-align: center;
       padding: 60px 20px 50px 20px;
@@ -114,6 +111,7 @@
     }
 
     .reviews-grid {
+      
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -123,14 +121,13 @@
 
     /* Beginner Review Box */
     .review-box {
-      background-color: white;
-      border: 1px solid gray;
+background: linear-gradient(100deg, rgb(163, 239, 203), rgb(186, 186, 196));
+      border: 1px solid rgb(10, 10, 10);
       border-radius: 10px;
       padding: 28px 24px;
       width: 330px;
       box-sizing: border-box;
       text-align: left;
-      box-shadow: 0 2px 8px gray;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -158,7 +155,7 @@
     }
 
     .review-box .stars {
-      color: orange;
+      color: rgb(98, 67, 9);
       font-size: 16px;
       margin-bottom: 10px;
     }
@@ -172,7 +169,7 @@
 
     /* Beginner Feedback Form */
     .feedback-box {
-      background-color: white;
+    background: linear-gradient(100deg, rgb(12, 176, 222), rgb(232, 9, 80));
       border: 2px solid gray;
       border-radius: 10px;
       padding: 35px 30px;
@@ -212,7 +209,7 @@
     .form-group textarea {
       width: 100%;
       padding: 10px;
-      border: 1px solid gray;
+      border: 1px solid rgb(239, 233, 233);
       border-radius: 6px;
       font-size: 15px;
       box-sizing: border-box;
@@ -223,7 +220,7 @@
     .form-group select:focus,
     .form-group textarea:focus {
       border-color: orange;
-      outline: none;
+    
     }
 
     .submit-btn {
@@ -244,7 +241,7 @@
 
     /* Bottom Info Box */
     .bottom-info-box {
-      background-color: #111a28;
+      background-color: #12284c;
       color: #b0bac9;
       padding: 40px 20px 25px 20px;
       text-align: center;
@@ -294,7 +291,7 @@
       color: white;
       font-size: 20px;
       text-decoration: none;
-      transition: background-color 0.2s ease, transform 0.2s ease;
+     
       cursor: pointer;
     }
 
@@ -305,7 +302,7 @@
     }
 
     .copyright-text {
-      border-top: 1px solid gray;
+      
       padding-top: 20px;
       font-size: 13px;
       color: #718096;
@@ -401,7 +398,7 @@
       <form id="reviewForm" action="#">
         <div class="form-group">
           <label>Your Name:</label>
-          <input type="text" placeholder="Enter your full name">
+          <input type="text" placeholder="Enter your full name ">
         </div>
         
         <div class="form-group">

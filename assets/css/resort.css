@@ -1,3 +1,5 @@
+body{
+    background-color: aliceblue;}
 .resort-card {
     width: 100%;
     display: flex;
@@ -38,8 +40,6 @@ body.body nav ul li a {
 }
 
 nav ul li a:hover,
-nav ul li a:active,
-nav ul li a:focus,
 nav ul li a.active {
     color: orange;
     background-color: transparent;
@@ -97,17 +97,14 @@ nav ul li a.active {
     cursor: pointer;
     border: none;
     display: inline-block;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 4px 8px gray;
 }
-
 .resort-details button:hover,
 .resort-card button:hover {
     background-color: darkorange;
     transform: translateY(-2px);
     box-shadow: 0 6px 12px gray;
 }
-
 .resort-details button:active,
 .resort-details button:focus,
 .resort-card button:active,
@@ -117,12 +114,10 @@ nav ul li a.active {
     transform: scale(0.95);
     border-radius: 15px;
 }
-
 .peace {
     text-align: center;
     margin: 50px auto;
 }
-
 .peace p {
     margin: 20px auto;
     width: 100%;
@@ -130,12 +125,10 @@ nav ul li a.active {
     font-size: 30px;
     text-align: center;
 }
-
 .explore-box {
     text-align: center;
     margin: 25px auto;
 }
-
 .explore-box button,
 .explore-box botton,
 .botton {
@@ -152,19 +145,16 @@ nav ul li a.active {
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px gray;
 }
-
 .explore-box button:hover,
 .explore-box botton:hover,
 .botton:hover {
     background-color: darkorange;
     transform: translateY(-2px);
 }
-
 .ex-icon {
     text-decoration: none;
     display: inline-block;
 }
-
 body {
     background-color: antiquewhite;
     margin: 0;
